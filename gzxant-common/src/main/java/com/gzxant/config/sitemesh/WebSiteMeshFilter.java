@@ -30,7 +30,7 @@ public class WebSiteMeshFilter extends ConfigurableSiteMeshFilter {
     		+ "," + "/**/insert"
             + "," + "/enter/import"
     		+ "," + "/**/update/*"
-    		+ "," + "/portals/*";
+    		+ "," + "/front/*";
     
 //    private String excludeProject = "portals";
 //    
