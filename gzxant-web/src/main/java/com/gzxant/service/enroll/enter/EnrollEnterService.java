@@ -1,5 +1,7 @@
 package com.gzxant.service.enroll.enter;
 
+import com.baomidou.mybatisplus.mapper.Condition;
+import com.gzxant.entity.enroll.personnel.EnrollPersonnel;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -19,5 +21,16 @@ import com.gzxant.base.service.impl.BaseService;
 @Service
 @Transactional(readOnly = true, rollbackFor = Exception.class)
 public class EnrollEnterService extends BaseService<EnrollEnterDao, EnrollEnter> implements IEnrollEnterService {
-	
+    /**
+     * 登录
+     *
+     * @param name
+     * @param password
+     * @return
+     */
+    @Override
+    public EnrollEnter findbyIdEnterdate(String personnel_id) {
+        EnrollEnter enrollEnter = selectOne(Condition.create().in("personnel_id",personnel_id));
+        return enrollEnter;
+    }
 }

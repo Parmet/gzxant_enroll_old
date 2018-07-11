@@ -32,4 +32,16 @@ public class EnrollPersonnelService extends BaseService<EnrollPersonnelDao, Enro
         EnrollPersonnel enrollPersonnel = selectOne(Condition.create().eq("name", name));
         return enrollPersonnel == null || !id.equals(0L) && enrollPersonnel.getId().equals(id);
     }
+    /**
+     * 登录
+     *
+     * @param name
+     * @param password
+     * @return
+     */
+    @Override
+    public EnrollPersonnel login(String name, String password) {
+        EnrollPersonnel enrollPersonnel = selectOne(Condition.create().eq("name", name).in("password",password));
+        return enrollPersonnel;
+    }
 }

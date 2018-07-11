@@ -2,6 +2,7 @@ package com.gzxant.service.enroll.enter;
 
 import com.gzxant.entity.enroll.enter.EnrollEnter;
 import com.gzxant.base.service.IBaseService;
+import com.gzxant.entity.enroll.personnel.EnrollPersonnel;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
@@ -13,4 +14,10 @@ import org.springframework.web.multipart.MultipartFile;
  * @since 2018-07-06
  */
 public interface IEnrollEnterService extends IBaseService<EnrollEnter> {
+    /**
+     * 用户登录
+     * @param personnel_id
+     * @return
+     */
+    EnrollEnter findbyIdEnterdate(String personnel_id);
 }
