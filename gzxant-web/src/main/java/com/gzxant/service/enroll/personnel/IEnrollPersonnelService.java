@@ -20,4 +20,12 @@ public interface IEnrollPersonnelService extends IBaseService<EnrollPersonnel> {
      * @return
      */
     Boolean checkLoginName(String name, Long id) ;
+
+    /**
+     * 用户登录
+     * @param name
+     * @param password
+     * @return
+     */
+    EnrollPersonnel login(String name, String password);
 }
