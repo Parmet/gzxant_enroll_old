@@ -29,6 +29,7 @@ public class WebSiteMeshFilter extends ConfigurableSiteMeshFilter {
     		+ "," + "/**/detail/*"
     		+ "," + "/**/insert"
             + "," + "/enter/import"
+            + "," + "/api/*"
     		+ "," + "/**/update/*"
     		+ "," + "/front/*";
     
